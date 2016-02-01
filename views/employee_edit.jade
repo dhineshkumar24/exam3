@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1= "Results"
+    #BITLA_DAILY_INVENTORY
+        - each employee in BITLA_DAILY_INVENTORY
+          div.employee
+             div.created_at= employee.created_at
+             div.title= employee.operatorName
+             div.arrivalTime= employee.arrivalTime
+             div.name= employee.departureTime
+             div.journeyHours= employee. journeyHours
+             div.fare= employee.fare
+        a(href="/")!= "Home"
